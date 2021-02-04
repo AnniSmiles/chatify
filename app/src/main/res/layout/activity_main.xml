@@ -33,7 +33,7 @@
 
 
     <EditText
-        android:id="@+id/registerEmail"
+        android:id="@+id/registerEmailEditText"
         android:layout_width="274dp"
         android:layout_height="46dp"
         android:layout_marginBottom="328dp"
@@ -87,7 +87,7 @@
         app:layout_constraintVertical_bias="0.189" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/registrationButton"
+        android:id="@+id/profileRegisterButton"
         android:layout_width="264dp"
         android:layout_height="47dp"
         android:layout_marginBottom="4dp"
