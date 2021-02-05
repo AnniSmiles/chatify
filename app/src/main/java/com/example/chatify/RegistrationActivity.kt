@@ -13,6 +13,7 @@ class RegistrationActivity : AppCompatActivity() {
     private lateinit var registerPassword: EditText
     private lateinit var checkPass: EditText
     private lateinit var registerUserButton: Button
+    private lateinit var signupRegister: Button
 
     private lateinit var mAuth:FirebaseAuth
 
@@ -22,10 +23,11 @@ class RegistrationActivity : AppCompatActivity() {
 
         mAuth= FirebaseAuth.getInstance()
 
-        registerUserEmail = findViewById(R.id.registerEmailEditText)
-        registerPassword = findViewById(R.id.registerPasswordEditText)
+        registerUserEmail = findViewById(R.id.regActivityMail)
+        registerPassword = findViewById(R.id.registerPasswordEdit)
         checkPass = findViewById(R.id.checkPasswordEditText)
         registerUserButton=findViewById(R.id.profileRegisterButton)
+        signupRegister=findViewById(R.id.profileSignUpButton)
 
         registerUserButton.setOnClickListener {
             val email = registerUserEmail.text.toString()
@@ -48,6 +50,9 @@ class RegistrationActivity : AppCompatActivity() {
 
             }
 
+        }
+        signupRegister.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
         }
     }
 }

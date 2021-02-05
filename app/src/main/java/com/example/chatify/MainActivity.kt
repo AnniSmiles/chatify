@@ -22,10 +22,10 @@ class MainActivity : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
-        loginUserMail = findViewById(R.id.registerEmailEditText)
-        userPassword=findViewById(R.id.registerPasswordEditText)
+        loginUserMail = findViewById(R.id.regActivityMail)
+        userPassword=findViewById(R.id.registerPasswordEdit)
         userInButton=findViewById(R.id.signupButton)
-        userUpButton=findViewById(R.id.profileRegisterButton)
+        userUpButton=findViewById(R.id.profileSignUpButton)
 
         userInButton.setOnClickListener {
             val email = loginUserMail.text.toString()    // amovikitxot informacia
