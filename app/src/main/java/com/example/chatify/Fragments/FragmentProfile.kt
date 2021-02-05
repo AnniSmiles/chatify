@@ -4,8 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
 import com.example.chatify.MainActivity
 
 import com.example.chatify.R
@@ -41,6 +43,7 @@ class FragmentProfile:Fragment(R.layout.fragment_profile) {
         }
         nameChange=view.findViewById(R.id.viewName)
         ageChange=view.findViewById(R.id.viewAge)
+        val imageView: ImageView = view.findViewById(R.id.imageView)
 
         var snapshotTask = FirebaseDatabase.getInstance().getReference("userEnteredInfo").child(FirebaseAuth.getInstance().currentUser?.uid!!).get()
 
@@ -51,6 +54,13 @@ class FragmentProfile:Fragment(R.layout.fragment_profile) {
                 var info = user as HashMap<String, String>
                 nameChange.text=info["name"]
                 ageChange.text=info["age"]
+                var Url = info["url"]
+
+                Glide.with(requireContext())
+                    .load(Url)
+                    .placeholder(R.drawable.ic_launcher_background)
+                    .centerCrop()
+                    .into(imageView)
 
 
             }
