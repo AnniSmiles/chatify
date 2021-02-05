@@ -26,7 +26,7 @@ class UserEditInfo : AppCompatActivity() {
         ageEdit= findViewById(R.id.ageEditText)
         nameEdit= findViewById(R.id.nameEditText)
 
-        database=FirebaseDatabase.getInstance().getReference("userEnteredInfo")
+        database=FirebaseDatabase.getInstance().getReference("Users")
 
         saveButton=findViewById(R.id.saveInfo)
 
