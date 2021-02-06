@@ -35,8 +35,6 @@ class PostAdapter(private var posts: List<updatePost>,private var context:Contex
             if (user != null) {
                 var info = user as HashMap<String, String>
 
-
-
                 Glide.with(context)
                     .load(info["url"])
                     .centerCrop()

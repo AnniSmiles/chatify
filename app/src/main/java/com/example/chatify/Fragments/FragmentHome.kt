@@ -1,5 +1,6 @@
 package com.example.chatify.Fragments
 
+
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -17,12 +18,16 @@ class FragmentHome:Fragment(R.layout.fragment_home) {
     private lateinit var recyclerView: RecyclerView
     private lateinit var postTyped: EditText
     private lateinit var postButton: Button
+    private lateinit var database: FirebaseDatabase
+    private lateinit var mAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         postTyped = requireView().findViewById(R.id.postEditText)
         recyclerView= requireView().findViewById(R.id.recycle)
         postButton = requireView().findViewById(R.id.postButton)
+        mAuth= FirebaseAuth.getInstance()
+        database=FirebaseDatabase.getInstance()
+        // ToDo i cant add getReference("updatePost") because of error, hence no new hash map will be created in database
 
 
 
