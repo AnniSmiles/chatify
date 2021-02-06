@@ -18,7 +18,7 @@ class NavigationActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment)
 
         val appConfig = AppBarConfiguration(setOf(
-            R.id.navigation_home,R.id.navigation_messages,R.id.navigation_profile
+            R.id.navigation_home,R.id.navigation_profile
         ))
         setupActionBarWithNavController(navController,appConfig)
         navView.setupWithNavController(navController)

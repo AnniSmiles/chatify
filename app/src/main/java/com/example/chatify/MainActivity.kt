@@ -22,6 +22,11 @@ class MainActivity : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
+        if(mAuth.currentUser != null){
+            startActivity(Intent(this,NavigationActivity::class.java))
+            finish()
+        }
+
         loginUserMail = findViewById(R.id.regActivityMail)
         userPassword=findViewById(R.id.registerPasswordEdit)
         userInButton=findViewById(R.id.signupButton)
