@@ -56,7 +56,7 @@ class FragmentProfile:Fragment(R.layout.fragment_profile) {
                 ageChange.text=info["age"]
                 var Url = info["url"]
 
-                Glide.with(requireContext())
+                Glide.with(view.context)
                     .load(Url)
                     .placeholder(R.drawable.ic_launcher_background)
                     .centerCrop()
